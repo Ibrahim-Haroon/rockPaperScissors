@@ -1,25 +1,18 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall
+CXXFLAGS = -std=c++11
 
 SRCDIR = src
+TESTDIR = tests
 
-SRC = $(wildcard $(SRCDIR)/*.cpp)
+all: main unittest
 
-OBJ = $(SRC:.cpp=.o)
+main: $(SRCDIR)/main.cpp $(SRCDIR)/RPS.cpp
+	$(CXX) $(CXXFLAGS) -o main $(SRCDIR)/main.cpp $(SRCDIR)/RPS.cpp
 
-EXECUTABLE = my_program
-
-all: $(EXECUTABLE)
-
-$(EXECUTABLE): $(OBJ)
-	$(CXX) $(CXXFLAGS) $^ -o $@
-
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+unittest: $(TESTDIR)/tests_rps.cpp $(SRCDIR)/RPS.cpp
+	$(CXX) $(CXXFLAGS) -o unittest -I$(SRCDIR) $(TESTDIR)/tests_rps.cpp $(SRCDIR)/RPS.cpp
 
 .PHONY: clean
 
 clean:
-	rm -f $(OBJ) $(EXECUTABLE)
-
-
+	rm -f main unittest

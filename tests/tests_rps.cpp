@@ -5,11 +5,19 @@
 //  Created by Ibrahim Haroon on 11/6/23.
 //
 
-#include "tests_rps.hpp"
 #include <cassert>
 #include <sstream>
 #include <iostream>
 #include "RPS.hpp"
+
+#define xassert(condition, message, ...) \
+do { \
+if (!(condition)) { \
+std::cerr << "Assertion failed: " << message << " at line " << __LINE__ << std::endl; \
+throw std::logic_error("Assertion failed: " + std::string(message)); \
+} \
+} while (false)
+
 
 void test_that_rps_default_constructor_sets_selected_move_correctly(void);
 void test_that_rps_constructor_sets_selected_move_sets_correctly_given_string(void);
@@ -102,4 +110,9 @@ void test_that_play_with_rps_obj_arg_returns_correct_outcome(void) {
     // act
     
     // assert
+}
+
+int main(void) {
+    driver();
+    return 0;
 }
