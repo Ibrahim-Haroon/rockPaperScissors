@@ -14,14 +14,6 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
       
   test:
     runs-on: ubuntu-latest
@@ -31,4 +23,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: run unit tests
-      run: make -C tests/ test  # Modify the command to run your unit tests in the 'tests/' directory
+      run: |
+        make
+        ./unittest
+      
