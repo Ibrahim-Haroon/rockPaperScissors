@@ -2,18 +2,24 @@ CXX = g++
 CXXFLAGS = -std=c++11 -Wall
 
 SRCDIR = src
-SOURCES = $(SRCDIR)/RPS.cpp $(SRCDIR)/main.cpp $(SRCDIR)/tests_rps.cpp
-HEADERS = $(SRCDIR)/RPS.h $(SRCDIR)/tests_rps.h
 
-main: $(SOURCES) $(HEADERS)
-	$(CXX) $(CXXFLAGS) $(SOURCES) -o main
+SRC = $(wildcard $(SRCDIR)/*.cpp)
 
-tests: $(SRCDIR)/tests_rps.cpp $(SRCDIR)/RPS.cpp $(HEADERS)
-	$(CXX) $(CXXFLAGS) $(SRCDIR)/tests_rps.cpp $(SRCDIR)/RPS.cpp -o tests
+OBJ = $(SRC:.cpp=.o)
+
+EXECUTABLE = my_program
+
+all: $(EXECUTABLE)
+
+$(EXECUTABLE): $(OBJ)
+	$(CXX) $(CXXFLAGS) $^ -o $@
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 .PHONY: clean
 
 clean:
-	rm -f main tests
+	rm -f $(OBJ) $(EXECUTABLE)
 
 
