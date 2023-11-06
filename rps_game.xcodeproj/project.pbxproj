@@ -10,6 +10,7 @@
 		FA5D0ED42AF8D05D00F7B3E7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA5D0ED32AF8D05D00F7B3E7 /* main.cpp */; };
 		FA5D0EDC2AF8D08900F7B3E7 /* RPS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA5D0EDA2AF8D08900F7B3E7 /* RPS.cpp */; };
 		FA5D0EE12AF8D2CF00F7B3E7 /* tests_rps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA5D0EDF2AF8D2CF00F7B3E7 /* tests_rps.cpp */; };
+		FA5D0EE52AF8E47400F7B3E7 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = FA5D0EE42AF8E47400F7B3E7 /* Makefile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,7 @@
 		FA5D0EDD2AF8D26400F7B3E7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FA5D0EDF2AF8D2CF00F7B3E7 /* tests_rps.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tests_rps.cpp; sourceTree = "<group>"; };
 		FA5D0EE02AF8D2CF00F7B3E7 /* tests_rps.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = tests_rps.hpp; sourceTree = "<group>"; };
+		FA5D0EE42AF8E47400F7B3E7 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +50,8 @@
 		FA5D0EC72AF8D05D00F7B3E7 = {
 			isa = PBXGroup;
 			children = (
+				FA5D0EE42AF8E47400F7B3E7 /* Makefile */,
 				FA5D0EDD2AF8D26400F7B3E7 /* README.md */,
-				FA5D0EDE2AF8D2BB00F7B3E7 /* tests */,
 				FA5D0ED22AF8D05D00F7B3E7 /* src */,
 				FA5D0ED12AF8D05D00F7B3E7 /* Products */,
 			);
@@ -69,18 +71,11 @@
 				FA5D0ED32AF8D05D00F7B3E7 /* main.cpp */,
 				FA5D0EDA2AF8D08900F7B3E7 /* RPS.cpp */,
 				FA5D0EDB2AF8D08900F7B3E7 /* RPS.hpp */,
+				FA5D0EE02AF8D2CF00F7B3E7 /* tests_rps.hpp */,
+				FA5D0EDF2AF8D2CF00F7B3E7 /* tests_rps.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
-		};
-		FA5D0EDE2AF8D2BB00F7B3E7 /* tests */ = {
-			isa = PBXGroup;
-			children = (
-				FA5D0EDF2AF8D2CF00F7B3E7 /* tests_rps.cpp */,
-				FA5D0EE02AF8D2CF00F7B3E7 /* tests_rps.hpp */,
-			);
-			path = tests;
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -141,6 +136,7 @@
 			files = (
 				FA5D0EE12AF8D2CF00F7B3E7 /* tests_rps.cpp in Sources */,
 				FA5D0ED42AF8D05D00F7B3E7 /* main.cpp in Sources */,
+				FA5D0EE52AF8E47400F7B3E7 /* Makefile in Sources */,
 				FA5D0EDC2AF8D08900F7B3E7 /* RPS.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
