@@ -46,7 +46,7 @@ std::ostream& operator<<(std::ostream& os, RPS& obj) {
 }
 
 int RPS::selected_move(void) {
-    return _selected_move;
+    return -1;
 }
 
 int RPS::computer_move(void) {
